@@ -1,0 +1,23 @@
+{% block content %}
+  <h1>Chef List</h1>
+  {% if chef_list %}
+  <ul>
+    {% for chef in chef_list %}
+      <li>
+          {{ chef.name }}
+
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no chefs in the library.</p>
+  {% endif %}
+  <p>
+    {% if recipe_count > 0 %}
+        There are recipes
+    {% else %}
+        Poop
+    {% endif %}
+  </p>
+
+{% endblock %}
